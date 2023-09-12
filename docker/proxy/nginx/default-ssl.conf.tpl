@@ -3,9 +3,6 @@ server {
     listen 80;
     server_name ${DOMAIN} www.${DOMAIN};
 
-    use_x_forwarded_for: true
-    trusted_proxies:
-        - 172.30.33.0/24
 
     location /.well-known/acme-challenge/ {
         root /vol/www/;
